@@ -1,0 +1,12 @@
+<table>
+    <tr>
+        <td>s.no</td>
+        <td>name</td>
+        <td>age</td>
+    </tr>
+    <tr *ngFor = "let record of records; let indexNo = index; let isEven = even; let isOdd = odd; let isfirstRecord = first; let islastRecord = last" [ngClass] ="{odd: isOdd,even: isEven,lastRecord: islastRecord,firstRecord: isfirstRecord }">
+        <td>{{indexNo+1}}</td>
+        <td>{{record.name}}</td>
+        <td>{{record.age}}</td>
+    </tr>
+</table>
