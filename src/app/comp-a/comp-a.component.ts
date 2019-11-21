@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RecordsService } from '../records.service';
 
 @Component({
   selector: 'comp-a',
@@ -10,33 +11,14 @@ export class CompAComponent implements OnInit {
   isEnabled = true;
   myField = 'lol';
 
-  records = [
-    {
-      name:"kalpriksh",
-      age:29
-    },
-    {
-      name:"dss",
-      age:52
-    },{
-      name:"sggs",
-      age:42
-    },{
-      name:"fdsfg",
-      age:21
-    },{
-      name:"dfsh",
-      age:24
-    }
-  ]
+  records = {};
 
-  constructor() { }
+  constructor(private allRecords : RecordsService) {
+    this.records  =  allRecords.getData();
+   }
 
-  clickFunction = (e) => {
-
-    console.log(e);
-    this.isEnabled = !this.isEnabled;
-
+  clickFunction = () => {
+    console.log(this.allRecords.getData());
   }
   
 

@@ -7,11 +7,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CompAComponent } from './comp-a/comp-a.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule,MatInputModule } from '@angular/material'
+import { RecordsService } from './records.service';
+import { CompBComponent } from './comp-b/comp-b.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CompAComponent
+    CompAComponent,
+    CompBComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +24,7 @@ import { MatSelectModule,MatInputModule } from '@angular/material'
     AppRoutingModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [RecordsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
