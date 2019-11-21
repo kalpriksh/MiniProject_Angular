@@ -9,6 +9,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule,MatInputModule } from '@angular/material'
 import { RecordsService } from './records.service';
 import { CompBComponent } from './comp-b/comp-b.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { CompBComponent } from './comp-b/comp-b.component';
     BrowserModule,
     MatFormFieldModule,
     MatInputModule,
+    HttpClientModule,
     MatSelectModule,
     AppRoutingModule,
     BrowserAnimationsModule

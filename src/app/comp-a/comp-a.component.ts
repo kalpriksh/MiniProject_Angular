@@ -11,11 +11,14 @@ export class CompAComponent implements OnInit {
   isEnabled = true;
   myField = 'lol';
 
-  records = {};
+  records = [];
 
   constructor(private allRecords : RecordsService) {
-    this.records  =  allRecords.getData();
-   }
+    allRecords.getData().subscribe((data) => {
+      this.records= data.obj;
+  });
+  
+}
 
   clickFunction = () => {
     console.log(this.allRecords.getData());
