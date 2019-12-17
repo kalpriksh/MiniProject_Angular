@@ -6,6 +6,8 @@ import { RecordsService } from '../records.service';
   templateUrl: './comp-a.component.html',
   styleUrls: ['./comp-a.component.css']
 })
+
+
 export class CompAComponent implements OnInit {
 
   isEnabled = true;
@@ -15,7 +17,7 @@ export class CompAComponent implements OnInit {
 
   constructor(private allRecords : RecordsService) {
     allRecords.getData().subscribe((data) => {
-      this.records= data.obj;
+      this.records = data.records;
   });
   
 }

@@ -9,6 +9,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule,MatInputModule } from '@angular/material'
 import { RecordsService } from './records.service';
 import { CompBComponent } from './comp-b/comp-b.component';
+import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -22,6 +23,17 @@ import { HttpClientModule } from '@angular/common/http';
     MatFormFieldModule,
     MatInputModule,
     HttpClientModule,
+    RouterModule.forRoot([
+      {
+        path:'',
+        component:CompAComponent
+      },
+      {
+        path:'comp-b',
+        component:CompBComponent
+      }
+
+    ]),
     MatSelectModule,
     AppRoutingModule,
     BrowserAnimationsModule

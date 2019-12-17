@@ -12,7 +12,7 @@ class CORSRequestHandler(SimpleHTTPRequestHandler):
         self.send_header('Cache-Control', 'no-store, no-cache, must-revalidate')
         return super(CORSRequestHandler, self).end_headers()
 
-print("server up?")
+print("server up")
 
 httpd = HTTPServer(('localhost', 8003), CORSRequestHandler)
 httpd.serve_forever()
